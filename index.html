@@ -1,0 +1,13 @@
+<script src="/api/js/qrcode.js"></script>
+<canvas id="test"></canvas>
+<script>
+
+var qrcodedraw = new QRCodeLib.QRCodeDraw();
+
+qrcodedraw.draw(document.getElementById('test'),"this text will be in the code!", function(error,canvas){
+  if(error){
+     return console.log('Error =( ',error);
+  }
+  console.log('success!');
+});
+</script>
